@@ -10,10 +10,7 @@ In this project, we implement CUDA programs with the help of [Numba](https://num
 ### cuQAOASim
 A class that is initialized with an array-like problem Hamiltonian $H_C$, and `cuQAOASim` will try to find the **highest energy** of $H_C$ (or equivalently, the ground energy of $-H_C$).
 
-After initialized, you can invoke `__call__` method with two arrays $\beta,\gamma$ that computes the expected output when QAOA arguments are configured $\beta,\gamma$:
-$$
-\bra{+}^{\otimes n}U^{\dagger}(\beta,\gamma)(-H_C)U(\beta,\gamma)\ket{+}^{\otimes n}.
-$$
+After initialized, you can invoke `__call__` method with two arrays $\beta,\gamma$ that computes the expectation of $-H_C$ when QAOA arguments are configured $\beta,\gamma$.
 
 ```py
 from cuQAOA import cuQAOASim
