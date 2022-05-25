@@ -1,17 +1,9 @@
 import numpy as np
-import networkx as nx
-import numpy as np
-import random as rnd
 from numba import cuda
-from loguru import logger
-# from init_policy import *
 from .cu_kernels import *
 from numba.core.errors import NumbaPerformanceWarning
 import warnings
 warnings.simplefilter('ignore', category=NumbaPerformanceWarning)
-
-# logger.add('logs/gpu/qaoa_gpu_main_{time}.log')
-
 
 def apply_dc_sum(s):
     '''
